@@ -1,0 +1,1384 @@
+Analysis & Synthesis report for GECKO
+Wed Oct 12 13:25:57 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |GECKO|CPU:inst|controller:controller_0|state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Added for RAM Pass-Through Logic
+ 16. Registers Packed Into Inferred Megafunctions
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated
+ 19. Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated
+ 20. Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated
+ 21. Parameter Settings for User Entity Instance: ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component
+ 22. Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0
+ 23. Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 12 13:25:56 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; GECKO                                       ;
+; Top-level Entity Name              ; GECKO                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 56,955                                      ;
+;     Total combinational functions  ; 56,762                                      ;
+;     Dedicated logic registers      ; 349                                         ;
+; Total registers                    ; 349                                         ;
+; Total pins                         ; 102                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 34,816                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE30F23C8       ;                    ;
+; Top-level entity name                                            ; GECKO              ; GECKO              ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; On                 ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
++----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; GECKO.bdf                                    ; yes             ; User Block Diagram/Schematic File                     ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/GECKO.bdf                                    ;         ;
+; ALU.bdf                                      ; yes             ; User Block Diagram/Schematic File                     ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/ALU.bdf                                      ;         ;
+; CPU.bdf                                      ; yes             ; User Block Diagram/Schematic File                     ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/CPU.bdf                                      ;         ;
+; ../vhdl/add_sub.vhd                          ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/add_sub.vhd                                     ;         ;
+; ../vhdl/buttons.vhd                          ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd                                     ;         ;
+; ../vhdl/comparator.vhd                       ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/comparator.vhd                                  ;         ;
+; ../vhdl/controller.vhd                       ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd                                  ;         ;
+; ../vhdl/decoder.vhd                          ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd                                     ;         ;
+; ../vhdl/extend.vhd                           ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/extend.vhd                                      ;         ;
+; ../vhdl/IR.vhd                               ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd                                          ;         ;
+; ../vhdl/LEDs.vhd                             ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/LEDs.vhd                                        ;         ;
+; ../vhdl/logic_unit.vhd                       ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/logic_unit.vhd                                  ;         ;
+; ../vhdl/multiplexer.vhd                      ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd                                 ;         ;
+; ../vhdl/mux2x5.vhd                           ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd                                      ;         ;
+; ../vhdl/mux2x16.vhd                          ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd                                     ;         ;
+; ../vhdl/mux2x32.vhd                          ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd                                     ;         ;
+; ../vhdl/PC.vhd                               ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd                                          ;         ;
+; ../vhdl/RAM.vhd                              ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd                                         ;         ;
+; ../vhdl/register_file.vhd                    ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd                               ;         ;
+; ../vhdl/ROM.vhd                              ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd                                         ;         ;
+; ../vhdl/ROM_Block.vhd                        ; yes             ; User Wizard-Generated File                            ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd                                   ;         ;
+; ../vhdl/shift_unit.vhd                       ; yes             ; User VHDL File                                        ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd                                  ;         ;
+; ROM.hex                                      ; yes             ; User Hexadecimal (Intel-Format) File                  ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/ROM.hex                                      ;         ;
+; altsyncram.tdf                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                      ;         ;
+; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc               ;         ;
+; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                         ;         ;
+; lpm_decode.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                      ;         ;
+; aglobal181.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                      ;         ;
+; a_rdenreg.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                       ;         ;
+; altrom.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                          ;         ;
+; altram.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                          ;         ;
+; altdpram.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                        ;         ;
+; db/altsyncram_rna1.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/altsyncram_rna1.tdf                       ;         ;
+; db/altsyncram_usi1.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/altsyncram_usi1.tdf                       ;         ;
+; db/gecko.ram0_register_file_87c776fc.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/gecko.ram0_register_file_87c776fc.hdl.mif ;         ;
++----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimated Total logic elements              ; 56,955                 ;
+;                                             ;                        ;
+; Total combinational functions               ; 56762                  ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 22472                  ;
+;     -- 3 input functions                    ; 34145                  ;
+;     -- <=2 input functions                  ; 145                    ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 56704                  ;
+;     -- arithmetic mode                      ; 58                     ;
+;                                             ;                        ;
+; Total registers                             ; 349                    ;
+;     -- Dedicated logic registers            ; 349                    ;
+;     -- I/O registers                        ; 0                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 102                    ;
+; Total memory bits                           ; 34816                  ;
+;                                             ;                        ;
+; Embedded Multiplier 9-bit elements          ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; RAM:RAM_0|address_s[9] ;
+; Maximum fan-out                             ; 3351                   ;
+; Total fan-out                               ; 195018                 ;
+; Average fan-out                             ; 3.40                   ;
++---------------------------------------------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |GECKO                                       ; 56762 (1142)        ; 349 (0)                   ; 34816       ; 0            ; 0       ; 0         ; 102  ; 0            ; |GECKO                                                                                              ; GECKO           ; work         ;
+;    |CPU:inst|                                ; 844 (0)             ; 212 (0)                   ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst                                                                                     ; CPU             ; work         ;
+;       |ALU:alu_0|                            ; 642 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0                                                                           ; ALU             ; work         ;
+;          |add_sub:add_sub_0|                 ; 41 (41)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|add_sub:add_sub_0                                                         ; add_sub         ; work         ;
+;          |logic_unit:logic_unit_0|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|logic_unit:logic_unit_0                                                   ; logic_unit      ; work         ;
+;          |multiplexer:multiplexer_0|         ; 257 (257)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0                                                 ; multiplexer     ; work         ;
+;          |shift_unit:shift_unit_0|           ; 341 (341)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|ALU:alu_0|shift_unit:shift_unit_0                                                   ; shift_unit      ; work         ;
+;       |IR:IR_0|                              ; 2 (2)               ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|IR:IR_0                                                                             ; IR              ; work         ;
+;       |PC:PC_0|                              ; 14 (14)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|PC:PC_0                                                                             ; PC              ; work         ;
+;       |controller:controller_0|              ; 37 (37)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|controller:controller_0                                                             ; controller      ; work         ;
+;       |mux2x16:mux_addr|                     ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x16:mux_addr                                                                    ; mux2x16         ; work         ;
+;       |mux2x32:mux_b|                        ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x32:mux_b                                                                       ; mux2x32         ; work         ;
+;       |mux2x5:mux_aw|                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|mux2x5:mux_aw                                                                       ; mux2x5          ; work         ;
+;       |register_file:register_file_0|        ; 74 (74)             ; 150 (150)                 ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0                                                       ; register_file   ; work         ;
+;          |altsyncram:reg_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0                                  ; altsyncram      ; work         ;
+;             |altsyncram_usi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated   ; altsyncram_usi1 ; work         ;
+;          |altsyncram:reg_rtl_1|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1                                  ; altsyncram      ; work         ;
+;             |altsyncram_usi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated   ; altsyncram_usi1 ; work         ;
+;    |LEDs:LEDs_0|                             ; 125 (125)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|LEDs:LEDs_0                                                                                  ; LEDs            ; work         ;
+;    |RAM:RAM_0|                               ; 54625 (54625)       ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|RAM:RAM_0                                                                                    ; RAM             ; work         ;
+;    |ROM:ROM_0|                               ; 1 (1)               ; 1 (1)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0                                                                                    ; ROM             ; work         ;
+;       |ROM_Block:rom_block|                  ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0|ROM_Block:rom_block                                                                ; ROM_Block       ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_rna1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ; altsyncram_rna1 ; work         ;
+;    |buttons:buttons_0|                       ; 15 (15)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|buttons:buttons_0                                                                            ; buttons         ; work         ;
+;    |decoder:decoder_0|                       ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GECKO|decoder:decoder_0                                                                            ; decoder         ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+; Name                                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                          ;
++---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ;
+; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ;
+; ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 1024         ; 32           ; --           ; --           ; 32768 ; ../quartus/ROM.hex                           ;
++---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GECKO|CPU:inst|controller:controller_0|state                                                                               ;
++--------------+------------+-------------+-------------+-------------+-------------+------------+--------------+--------------+--------------+
+; Name         ; state.I_OP ; state.LOAD2 ; state.LOAD1 ; state.BREAK ; state.STORE ; state.R_OP ; state.DECODE ; state.FETCH2 ; state.FETCH1 ;
++--------------+------------+-------------+-------------+-------------+-------------+------------+--------------+--------------+--------------+
+; state.FETCH1 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0          ; 0            ; 0            ; 0            ;
+; state.FETCH2 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0          ; 0            ; 1            ; 1            ;
+; state.DECODE ; 0          ; 0           ; 0           ; 0           ; 0           ; 0          ; 1            ; 0            ; 1            ;
+; state.R_OP   ; 0          ; 0           ; 0           ; 0           ; 0           ; 1          ; 0            ; 0            ; 1            ;
+; state.STORE  ; 0          ; 0           ; 0           ; 0           ; 1           ; 0          ; 0            ; 0            ; 1            ;
+; state.BREAK  ; 0          ; 0           ; 0           ; 1           ; 0           ; 0          ; 0            ; 0            ; 1            ;
+; state.LOAD1  ; 0          ; 0           ; 1           ; 0           ; 0           ; 0          ; 0            ; 0            ; 1            ;
+; state.LOAD2  ; 0          ; 1           ; 0           ; 0           ; 0           ; 0          ; 0            ; 0            ; 1            ;
+; state.I_OP   ; 1          ; 0           ; 0           ; 0           ; 0           ; 0          ; 0            ; 0            ; 1            ;
++--------------+------------+-------------+-------------+-------------+-------------+------------+--------------+--------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                         ;
++--------------------------------------------------------+-------------------------------------------+------------------------+
+; Latch Name                                             ; Latch Enable Signal                       ; Free of Timing Hazards ;
++--------------------------------------------------------+-------------------------------------------+------------------------+
+; CPU:inst|controller:controller_0|write                 ; CPU:inst|controller:controller_0|WideOr9  ; yes                    ;
+; CPU:inst|controller:controller_0|sel_b                 ; CPU:inst|controller:controller_0|WideOr6  ; yes                    ;
+; CPU:inst|controller:controller_0|op_alu[0]$latch       ; CPU:inst|controller:controller_0|Mux7     ; yes                    ;
+; CPU:inst|controller:controller_0|op_alu[1]$latch       ; CPU:inst|controller:controller_0|Mux7     ; yes                    ;
+; CPU:inst|controller:controller_0|sel_addr              ; CPU:inst|controller:controller_0|WideOr5  ; yes                    ;
+; CPU:inst|controller:controller_0|imm_signed            ; CPU:inst|controller:controller_0|WideOr0  ; yes                    ;
+; CPU:inst|controller:controller_0|rf_wren               ; CPU:inst|controller:controller_0|WideOr3  ; yes                    ;
+; CPU:inst|controller:controller_0|sel_rC                ; CPU:inst|controller:controller_0|WideOr8  ; yes                    ;
+; CPU:inst|controller:controller_0|ir_en                 ; CPU:inst|controller:controller_0|WideOr11 ; yes                    ;
+; RAM:RAM_0|reg~13526                                    ; rtl~324                                   ; yes                    ;
+; RAM:RAM_0|reg~13014                                    ; rtl~341                                   ; yes                    ;
+; RAM:RAM_0|reg~12502                                    ; rtl~353                                   ; yes                    ;
+; RAM:RAM_0|reg~14038                                    ; rtl~368                                   ; yes                    ;
+; RAM:RAM_0|reg~10966                                    ; rtl~340                                   ; yes                    ;
+; RAM:RAM_0|reg~11478                                    ; rtl~321                                   ; yes                    ;
+; RAM:RAM_0|reg~10454                                    ; rtl~352                                   ; yes                    ;
+; RAM:RAM_0|reg~11990                                    ; rtl~369                                   ; yes                    ;
+; RAM:RAM_0|reg~9430                                     ; rtl~328                                   ; yes                    ;
+; RAM:RAM_0|reg~8918                                     ; rtl~342                                   ; yes                    ;
+; RAM:RAM_0|reg~8406                                     ; rtl~354                                   ; yes                    ;
+; RAM:RAM_0|reg~9942                                     ; rtl~370                                   ; yes                    ;
+; RAM:RAM_0|reg~15062                                    ; rtl~343                                   ; yes                    ;
+; RAM:RAM_0|reg~15574                                    ; rtl~333                                   ; yes                    ;
+; RAM:RAM_0|reg~14550                                    ; rtl~355                                   ; yes                    ;
+; RAM:RAM_0|reg~16086                                    ; rtl~371                                   ; yes                    ;
+; RAM:RAM_0|reg~11094                                    ; rtl~276                                   ; yes                    ;
+; RAM:RAM_0|reg~11606                                    ; rtl~277                                   ; yes                    ;
+; RAM:RAM_0|reg~10582                                    ; rtl~278                                   ; yes                    ;
+; RAM:RAM_0|reg~12118                                    ; rtl~279                                   ; yes                    ;
+; RAM:RAM_0|reg~13654                                    ; rtl~272                                   ; yes                    ;
+; RAM:RAM_0|reg~13142                                    ; rtl~273                                   ; yes                    ;
+; RAM:RAM_0|reg~12630                                    ; rtl~274                                   ; yes                    ;
+; RAM:RAM_0|reg~14166                                    ; rtl~275                                   ; yes                    ;
+; RAM:RAM_0|reg~9558                                     ; rtl~280                                   ; yes                    ;
+; RAM:RAM_0|reg~9046                                     ; rtl~281                                   ; yes                    ;
+; RAM:RAM_0|reg~8534                                     ; rtl~282                                   ; yes                    ;
+; RAM:RAM_0|reg~10070                                    ; rtl~283                                   ; yes                    ;
+; RAM:RAM_0|reg~15190                                    ; rtl~284                                   ; yes                    ;
+; RAM:RAM_0|reg~15702                                    ; rtl~285                                   ; yes                    ;
+; RAM:RAM_0|reg~14678                                    ; rtl~286                                   ; yes                    ;
+; RAM:RAM_0|reg~16214                                    ; rtl~287                                   ; yes                    ;
+; RAM:RAM_0|reg~10838                                    ; rtl~388                                   ; yes                    ;
+; RAM:RAM_0|reg~11350                                    ; rtl~400                                   ; yes                    ;
+; RAM:RAM_0|reg~10326                                    ; rtl~416                                   ; yes                    ;
+; RAM:RAM_0|reg~11862                                    ; rtl~436                                   ; yes                    ;
+; RAM:RAM_0|reg~13398                                    ; rtl~401                                   ; yes                    ;
+; RAM:RAM_0|reg~12886                                    ; rtl~389                                   ; yes                    ;
+; RAM:RAM_0|reg~12374                                    ; rtl~417                                   ; yes                    ;
+; RAM:RAM_0|reg~13910                                    ; rtl~437                                   ; yes                    ;
+; RAM:RAM_0|reg~9302                                     ; rtl~402                                   ; yes                    ;
+; RAM:RAM_0|reg~8790                                     ; rtl~390                                   ; yes                    ;
+; RAM:RAM_0|reg~8278                                     ; rtl~418                                   ; yes                    ;
+; RAM:RAM_0|reg~9814                                     ; rtl~438                                   ; yes                    ;
+; RAM:RAM_0|reg~14934                                    ; rtl~391                                   ; yes                    ;
+; RAM:RAM_0|reg~15446                                    ; rtl~403                                   ; yes                    ;
+; RAM:RAM_0|reg~14422                                    ; rtl~419                                   ; yes                    ;
+; RAM:RAM_0|reg~15958                                    ; rtl~439                                   ; yes                    ;
+; RAM:RAM_0|reg~13782                                    ; rtl~468                                   ; yes                    ;
+; RAM:RAM_0|reg~13270                                    ; rtl~453                                   ; yes                    ;
+; RAM:RAM_0|reg~12758                                    ; rtl~481                                   ; yes                    ;
+; RAM:RAM_0|reg~14294                                    ; rtl~496                                   ; yes                    ;
+; RAM:RAM_0|reg~11222                                    ; rtl~448                                   ; yes                    ;
+; RAM:RAM_0|reg~11734                                    ; rtl~469                                   ; yes                    ;
+; RAM:RAM_0|reg~10710                                    ; rtl~484                                   ; yes                    ;
+; RAM:RAM_0|reg~12246                                    ; rtl~501                                   ; yes                    ;
+; RAM:RAM_0|reg~9686                                     ; rtl~470                                   ; yes                    ;
+; RAM:RAM_0|reg~9174                                     ; rtl~457                                   ; yes                    ;
+; RAM:RAM_0|reg~8662                                     ; rtl~489                                   ; yes                    ;
+; RAM:RAM_0|reg~10198                                    ; rtl~504                                   ; yes                    ;
+; RAM:RAM_0|reg~15318                                    ; rtl~460                                   ; yes                    ;
+; RAM:RAM_0|reg~15830                                    ; rtl~471                                   ; yes                    ;
+; RAM:RAM_0|reg~14806                                    ; rtl~492                                   ; yes                    ;
+; RAM:RAM_0|reg~16342                                    ; rtl~509                                   ; yes                    ;
+; RAM:RAM_0|reg~10934                                    ; rtl~337                                   ; yes                    ;
+; RAM:RAM_0|reg~12982                                    ; rtl~336                                   ; yes                    ;
+; RAM:RAM_0|reg~8886                                     ; rtl~338                                   ; yes                    ;
+; RAM:RAM_0|reg~15030                                    ; rtl~339                                   ; yes                    ;
+; RAM:RAM_0|reg~13110                                    ; rtl~261                                   ; yes                    ;
+; RAM:RAM_0|reg~11062                                    ; rtl~256                                   ; yes                    ;
+; RAM:RAM_0|reg~9014                                     ; rtl~265                                   ; yes                    ;
+; RAM:RAM_0|reg~15158                                    ; rtl~268                                   ; yes                    ;
+; RAM:RAM_0|reg~12854                                    ; rtl~384                                   ; yes                    ;
+; RAM:RAM_0|reg~10806                                    ; rtl~385                                   ; yes                    ;
+; RAM:RAM_0|reg~8758                                     ; rtl~386                                   ; yes                    ;
+; RAM:RAM_0|reg~14902                                    ; rtl~387                                   ; yes                    ;
+; RAM:RAM_0|reg~11190                                    ; rtl~449                                   ; yes                    ;
+; RAM:RAM_0|reg~13238                                    ; rtl~452                                   ; yes                    ;
+; RAM:RAM_0|reg~9142                                     ; rtl~456                                   ; yes                    ;
+; RAM:RAM_0|reg~15286                                    ; rtl~461                                   ; yes                    ;
+; RAM:RAM_0|reg~13622                                    ; rtl~260                                   ; yes                    ;
+; RAM:RAM_0|reg~13494                                    ; rtl~325                                   ; yes                    ;
+; RAM:RAM_0|reg~13366                                    ; rtl~404                                   ; yes                    ;
+; RAM:RAM_0|reg~13750                                    ; rtl~465                                   ; yes                    ;
+; RAM:RAM_0|reg~11446                                    ; rtl~320                                   ; yes                    ;
+; RAM:RAM_0|reg~11574                                    ; rtl~257                                   ; yes                    ;
+; RAM:RAM_0|reg~11318                                    ; rtl~405                                   ; yes                    ;
+; RAM:RAM_0|reg~11702                                    ; rtl~464                                   ; yes                    ;
+; RAM:RAM_0|reg~9526                                     ; rtl~264                                   ; yes                    ;
+; RAM:RAM_0|reg~9398                                     ; rtl~329                                   ; yes                    ;
+; RAM:RAM_0|reg~9270                                     ; rtl~406                                   ; yes                    ;
+; Number of user-specified and inferred latches = 32779  ;                                           ;                        ;
++--------------------------------------------------------+-------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++----------------------------------------------+----------------------------------------+
+; Register name                                ; Reason for Removal                     ;
++----------------------------------------------+----------------------------------------+
+; ROM:ROM_0|address_s[0]                       ; Merged with RAM:RAM_0|address_s[0]     ;
+; ROM:ROM_0|address_s[1]                       ; Merged with RAM:RAM_0|address_s[1]     ;
+; ROM:ROM_0|address_s[2]                       ; Merged with RAM:RAM_0|address_s[2]     ;
+; ROM:ROM_0|address_s[3]                       ; Merged with RAM:RAM_0|address_s[3]     ;
+; ROM:ROM_0|address_s[4]                       ; Merged with RAM:RAM_0|address_s[4]     ;
+; ROM:ROM_0|address_s[5]                       ; Merged with RAM:RAM_0|address_s[5]     ;
+; ROM:ROM_0|address_s[6]                       ; Merged with RAM:RAM_0|address_s[6]     ;
+; ROM:ROM_0|address_s[7]                       ; Merged with RAM:RAM_0|address_s[7]     ;
+; ROM:ROM_0|address_s[8]                       ; Merged with RAM:RAM_0|address_s[8]     ;
+; ROM:ROM_0|address_s[9]                       ; Merged with RAM:RAM_0|address_s[9]     ;
+; ROM:ROM_0|read_s                             ; Merged with RAM:RAM_0|read_s           ;
+; CPU:inst|PC:PC_0|curr_addr[1]                ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|PC:PC_0|addr[1]                     ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|PC:PC_0|curr_addr[0]                ; Stuck at GND due to stuck port data_in ;
+; CPU:inst|PC:PC_0|addr[0]                     ; Stuck at GND due to stuck port data_in ;
+; buttons:buttons_0|read_reg                   ; Lost fanout                            ;
+; CPU:inst|controller:controller_0|state.BREAK ; Lost fanout                            ;
+; CPU:inst|controller:controller_0|state.LOAD2 ; Lost fanout                            ;
+; Total Number of Removed Registers = 18       ;                                        ;
++----------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                        ;
++-------------------------------+---------------------------+----------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------------+---------------------------+----------------------------------------+
+; CPU:inst|PC:PC_0|curr_addr[1] ; Stuck at GND              ; CPU:inst|PC:PC_0|addr[1]               ;
+;                               ; due to stuck port data_in ;                                        ;
+; CPU:inst|PC:PC_0|curr_addr[0] ; Stuck at GND              ; CPU:inst|PC:PC_0|addr[0]               ;
+;                               ; due to stuck port data_in ;                                        ;
++-------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 349   ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 159   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 169   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Inverted Register Statistics                                          ;
++-------------------------------------------------------------+---------+
+; Inverted Register                                           ; Fan out ;
++-------------------------------------------------------------+---------+
+; LEDs:LEDs_0|duty_cycle[3]                                   ; 2       ;
+; LEDs:LEDs_0|duty_cycle[2]                                   ; 2       ;
+; LEDs:LEDs_0|duty_cycle[1]                                   ; 2       ;
+; LEDs:LEDs_0|duty_cycle[0]                                   ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[12] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[46] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[48] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[50] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[52] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[14] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[62] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[64] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[66] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[68] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[18] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[16] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[38] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[40] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[42] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[44] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[54] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[56] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[58] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[60] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[20] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[36] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[36] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[22] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[24] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[26] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[28] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[70] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[72] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[74] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[12] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[30] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[32] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[34] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[14] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[16] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[18] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[20] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[34] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[32] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[30] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[28] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[26] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[24] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[22] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[38] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[42] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[40] ; 2       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[74] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[44] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[46] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[48] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[50] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[52] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[54] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[56] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[58] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[60] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[62] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[64] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[66] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[68] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[70] ; 1       ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[72] ; 1       ;
+; buttons:buttons_0|buttons_reg[3]                            ; 1       ;
+; buttons:buttons_0|buttons_reg[0]                            ; 1       ;
+; buttons:buttons_0|buttons_reg[1]                            ; 1       ;
+; buttons:buttons_0|buttons_reg[2]                            ; 1       ;
+; Total number of inverted registers = 72                     ;         ;
++-------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                                     ;
++-------------------------------------------------------------+--------------------------------------------------+
+; Register Name                                               ; RAM Name                                         ;
++-------------------------------------------------------------+--------------------------------------------------+
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[0]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[1]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[2]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[3]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[4]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[5]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[6]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[7]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[8]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[9]  ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[10] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[11] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[12] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[13] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[14] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[15] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[16] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[17] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[18] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[19] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[20] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[21] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[22] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[23] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[24] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[25] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[26] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[27] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[28] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[29] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[30] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[31] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[32] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[33] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[34] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[35] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[36] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[37] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[38] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[39] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[40] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[41] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[42] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[43] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[44] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[45] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[46] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[47] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[48] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[49] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[50] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[51] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[52] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[53] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[54] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[55] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[56] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[57] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[58] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[59] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[60] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[61] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[62] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[63] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[64] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[65] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[66] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[67] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[68] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[69] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[70] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[71] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[72] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[73] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_0_bypass[74] ; CPU:inst|register_file:register_file_0|reg_rtl_0 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[0]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[1]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[2]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[3]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[4]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[5]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[6]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[7]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[8]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[9]  ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[10] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[11] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[12] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[13] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[14] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[15] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[16] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[17] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[18] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[19] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[20] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[21] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[22] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[23] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[24] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[25] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[26] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[27] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[28] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[29] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[30] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[31] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[32] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[33] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[34] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[35] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[36] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[37] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[38] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[39] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[40] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[41] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[42] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[43] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[44] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[45] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[46] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[47] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[48] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[49] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[50] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[51] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[52] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[53] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[54] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[55] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[56] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[57] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[58] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[59] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[60] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[61] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[62] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[63] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[64] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[65] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[66] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[67] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[68] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[69] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[70] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[71] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[72] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[73] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
+; CPU:inst|register_file:register_file_0|reg_rtl_1_bypass[74] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ;
++-------------------------------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                         ;
++----------------------------+--------------------------------------------------+------+
+; Register Name              ; Megafunction                                     ; Type ;
++----------------------------+--------------------------------------------------+------+
+; CPU:inst|IR:IR_0|Q[27..31] ; CPU:inst|register_file:register_file_0|reg_rtl_1 ; RAM  ;
++----------------------------+--------------------------------------------------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 7:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[18]                             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[7]                              ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[0]                              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|Mux9              ;
+; 1:1                ; 2 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|Mux6              ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |GECKO|rddata[30]                                         ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux17 ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux15 ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux27 ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux6  ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux29 ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux3  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux1  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0|altsyncram_usi1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1|altsyncram_usi1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                        ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                 ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                                 ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 1                    ; Untyped                                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; ../quartus/ROM.hex   ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_rna1      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0 ;
++------------------------------------+----------------------------------------------+--------------------------+
+; Parameter Name                     ; Value                                        ; Type                     ;
++------------------------------------+----------------------------------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                            ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                                           ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                          ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                                           ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                          ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                                            ; Untyped                  ;
+; OPERATION_MODE                     ; DUAL_PORT                                    ; Untyped                  ;
+; WIDTH_A                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_A                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_A                         ; 32                                           ; Untyped                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                 ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                                         ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WIDTH_B                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_B                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_B                         ; 32                                           ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1                                       ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                       ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1                                       ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK0                                       ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                 ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1                                       ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                                            ; Untyped                  ;
+; WIDTH_BYTEENA_B                    ; 1                                            ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                                         ; Untyped                  ;
+; BYTE_SIZE                          ; 8                                            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; INIT_FILE                          ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                       ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                                            ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                                        ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                        ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                                            ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                 ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_usi1                              ; Untyped                  ;
++------------------------------------+----------------------------------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1 ;
++------------------------------------+----------------------------------------------+--------------------------+
+; Parameter Name                     ; Value                                        ; Type                     ;
++------------------------------------+----------------------------------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                            ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                                           ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                          ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                                           ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                          ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                                            ; Untyped                  ;
+; OPERATION_MODE                     ; DUAL_PORT                                    ; Untyped                  ;
+; WIDTH_A                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_A                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_A                         ; 32                                           ; Untyped                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                 ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                                         ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                                         ; Untyped                  ;
+; WIDTH_B                            ; 32                                           ; Untyped                  ;
+; WIDTHAD_B                          ; 5                                            ; Untyped                  ;
+; NUMWORDS_B                         ; 32                                           ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1                                       ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                       ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1                                       ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK0                                       ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                 ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1                                       ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                                         ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                                         ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                                         ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                                            ; Untyped                  ;
+; WIDTH_BYTEENA_B                    ; 1                                            ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                                         ; Untyped                  ;
+; BYTE_SIZE                          ; 8                                            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                         ; Untyped                  ;
+; INIT_FILE                          ; db/GECKO.ram0_register_file_87c776fc.hdl.mif ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                       ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                                            ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                       ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                              ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                                        ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                        ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                                            ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                 ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_usi1                              ; Untyped                  ;
++------------------------------------+----------------------------------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                          ;
++-------------------------------------------+---------------------------------------------------------------+
+; Name                                      ; Value                                                         ;
++-------------------------------------------+---------------------------------------------------------------+
+; Number of entity instances                ; 3                                                             ;
+; Entity Instance                           ; ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                           ;
+;     -- WIDTH_A                            ; 32                                                            ;
+;     -- NUMWORDS_A                         ; 1024                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0   ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                     ;
+;     -- WIDTH_A                            ; 32                                                            ;
+;     -- NUMWORDS_A                         ; 32                                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 32                                                            ;
+;     -- NUMWORDS_B                         ; 32                                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
+; Entity Instance                           ; CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_1   ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                     ;
+;     -- WIDTH_A                            ; 32                                                            ;
+;     -- NUMWORDS_A                         ; 32                                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 32                                                            ;
+;     -- NUMWORDS_B                         ; 32                                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
++-------------------------------------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 102                         ;
+; cycloneiii_ff         ; 349                         ;
+;     CLR               ; 19                          ;
+;     CLR SCLR          ; 8                           ;
+;     ENA               ; 37                          ;
+;     ENA CLR           ; 132                         ;
+;     plain             ; 153                         ;
+; cycloneiii_lcell_comb ; 56762                       ;
+;     arith             ; 58                          ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 38                          ;
+;     normal            ; 56704                       ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 114                         ;
+;         3 data inputs ; 34107                       ;
+;         4 data inputs ; 22472                       ;
+; cycloneiii_ram_block  ; 96                          ;
+;                       ;                             ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 13.46                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Oct 12 13:24:33 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file gecko.bdf
+    Info (12023): Found entity 1: GECKO
+Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
+    Info (12023): Found entity 1: CPU
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/add_sub.vhd
+    Info (12022): Found design unit 1: add_sub-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/add_sub.vhd Line: 16
+    Info (12023): Found entity 1: add_sub File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/add_sub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/buttons.vhd
+    Info (12022): Found design unit 1: buttons-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd Line: 22
+    Info (12023): Found entity 1: buttons File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/comparator.vhd
+    Info (12022): Found design unit 1: comparator-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/comparator.vhd Line: 16
+    Info (12023): Found entity 1: comparator File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/comparator.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/controller.vhd
+    Info (12022): Found design unit 1: controller-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 39
+    Info (12023): Found entity 1: controller File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/decoder.vhd
+    Info (12022): Found design unit 1: decoder-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 15
+    Info (12023): Found entity 1: decoder File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/extend.vhd
+    Info (12022): Found design unit 1: extend-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/extend.vhd Line: 12
+    Info (12023): Found entity 1: extend File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/extend.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/ir.vhd
+    Info (12022): Found design unit 1: IR-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 13
+    Info (12023): Found entity 1: IR File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/leds.vhd
+    Info (12022): Found design unit 1: LEDs-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/LEDs.vhd Line: 22
+    Info (12023): Found entity 1: LEDs File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/LEDs.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/logic_unit.vhd
+    Info (12022): Found design unit 1: logic_unit-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/logic_unit.vhd Line: 13
+    Info (12023): Found entity 1: logic_unit File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/logic_unit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/multiplexer.vhd
+    Info (12022): Found design unit 1: multiplexer-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd Line: 15
+    Info (12023): Found entity 1: multiplexer File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/mux2x5.vhd
+    Info (12022): Found design unit 1: mux2x5-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd Line: 13
+    Info (12023): Found entity 1: mux2x5 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/mux2x16.vhd
+    Info (12022): Found design unit 1: mux2x16-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd Line: 13
+    Info (12023): Found entity 1: mux2x16 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/mux2x32.vhd
+    Info (12022): Found design unit 1: mux2x32-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd Line: 13
+    Info (12023): Found entity 1: mux2x32 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/pc.vhd
+    Info (12022): Found design unit 1: PC-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 19
+    Info (12023): Found entity 1: PC File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/ram.vhd
+    Info (12022): Found design unit 1: RAM-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd Line: 16
+    Info (12023): Found entity 1: RAM File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/register_file.vhd
+    Info (12022): Found design unit 1: register_file-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd Line: 18
+    Info (12023): Found entity 1: register_file File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/rom.vhd
+    Info (12022): Found design unit 1: ROM-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd Line: 14
+    Info (12023): Found entity 1: ROM File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/rom_block.vhd
+    Info (12022): Found design unit 1: rom_block-SYN File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd Line: 52
+    Info (12023): Found entity 1: ROM_Block File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file /epfl/ba3/cs-208/labs/lab3/template/vhdl/shift_unit.vhd
+    Info (12022): Found design unit 1: shift_unit-synth File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd Line: 14
+    Info (12023): Found entity 1: shift_unit File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd Line: 5
+Info (12127): Elaborating entity "GECKO" for the top level hierarchy
+Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:LEDs_0"
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:decoder_0"
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(16): used explicit default value for signal "rom_down" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 16
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(17): used explicit default value for signal "rom_up" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 17
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(18): used explicit default value for signal "ram_down" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 18
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(19): used explicit default value for signal "ram_up" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 19
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(20): used explicit default value for signal "led_down" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 20
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(21): used explicit default value for signal "led_up" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(22): used explicit default value for signal "buttons_down" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at decoder.vhd(23): used explicit default value for signal "buttons_up" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at decoder.vhd(28): signal "rom_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at decoder.vhd(28): signal "rom_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at decoder.vhd(33): signal "ram_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at decoder.vhd(33): signal "ram_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at decoder.vhd(38): signal "led_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at decoder.vhd(38): signal "led_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at decoder.vhd(43): signal "buttons_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at decoder.vhd(43): signal "buttons_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 43
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:inst"
+Info (12128): Elaborating entity "controller" for hierarchy "CPU:inst|controller:controller_0"
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(45): used explicit default value for signal "r_type" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 45
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(46): used explicit default value for signal "do_and" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 46
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(47): used explicit default value for signal "do_srl" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(48): used explicit default value for signal "do_addi" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(49): used explicit default value for signal "do_ldw" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 49
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(50): used explicit default value for signal "do_stw" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 50
+Warning (10540): VHDL Signal Declaration warning at controller.vhd(51): used explicit default value for signal "do_break" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 51
+Warning (10492): VHDL Process Statement warning at controller.vhd(106): signal "r_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at controller.vhd(115): signal "do_addi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at controller.vhd(117): signal "do_ldw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at controller.vhd(119): signal "do_stw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "do_and" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "do_srl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at controller.vhd(110): signal "do_break" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 110
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "branch_op", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "imm_signed", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "ir_en", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "pc_add_imm", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "pc_en", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "pc_sel_a", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "pc_sel_imm", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "rf_wren", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_addr", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_b", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_mem", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_pc", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_ra", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_rC", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "write", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "read", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at controller.vhd(167): signal "r_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at controller.vhd(178): signal "do_addi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 178
+Warning (10492): VHDL Process Statement warning at controller.vhd(178): signal "do_ldw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 178
+Warning (10492): VHDL Process Statement warning at controller.vhd(178): signal "do_stw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 178
+Warning (10492): VHDL Process Statement warning at controller.vhd(169): signal "do_and" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 169
+Warning (10492): VHDL Process Statement warning at controller.vhd(172): signal "do_srl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 172
+Warning (10631): VHDL Process Statement warning at controller.vhd(164): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+Info (10041): Inferred latch for "read" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "write" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "sel_rC" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "sel_ra" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "sel_pc" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "sel_mem" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "sel_b" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "sel_addr" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "rf_wren" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "pc_sel_imm" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "pc_sel_a" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "pc_en" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "pc_add_imm" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "ir_en" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "imm_signed" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (10041): Inferred latch for "branch_op" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
+Info (12128): Elaborating entity "IR" for hierarchy "CPU:inst|IR:IR_0"
+Info (12128): Elaborating entity "mux2x16" for hierarchy "CPU:inst|mux2x16:mux_addr"
+Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst|PC:PC_0"
+Warning (10631): VHDL Process Statement warning at PC.vhd(27): inferring latch(es) for signal or variable "addr", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[16]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[17]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[18]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[19]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[20]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[21]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[22]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[23]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[24]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[25]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[26]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[27]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[28]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[29]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[30]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (10041): Inferred latch for "addr[31]" at PC.vhd(27) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd Line: 27
+Info (12128): Elaborating entity "ALU" for hierarchy "CPU:inst|ALU:alu_0"
+Info (12128): Elaborating entity "multiplexer" for hierarchy "CPU:inst|ALU:alu_0|multiplexer:multiplexer_0"
+Info (12128): Elaborating entity "add_sub" for hierarchy "CPU:inst|ALU:alu_0|add_sub:add_sub_0"
+Info (12128): Elaborating entity "comparator" for hierarchy "CPU:inst|ALU:alu_0|comparator:comparator_0"
+Info (12128): Elaborating entity "logic_unit" for hierarchy "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0"
+Info (12128): Elaborating entity "shift_unit" for hierarchy "CPU:inst|ALU:alu_0|shift_unit:shift_unit_0"
+Info (12128): Elaborating entity "register_file" for hierarchy "CPU:inst|register_file:register_file_0"
+Warning (10492): VHDL Process Statement warning at register_file.vhd(28): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at register_file.vhd(33): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd Line: 33
+Info (12128): Elaborating entity "mux2x5" for hierarchy "CPU:inst|mux2x5:mux_aw"
+Info (12128): Elaborating entity "mux2x32" for hierarchy "CPU:inst|mux2x32:mux_data"
+Info (12128): Elaborating entity "extend" for hierarchy "CPU:inst|extend:extend_0"
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM_0"
+Info (12128): Elaborating entity "ROM_Block" for hierarchy "ROM:ROM_0|ROM_Block:rom_block" File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd Line: 32
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component" File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd Line: 85
+Info (12130): Elaborated megafunction instantiation "ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component" File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd Line: 85
+Info (12133): Instantiated megafunction "ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component" with the following parameter: File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd Line: 85
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "../quartus/ROM.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rna1.tdf
+    Info (12023): Found entity 1: altsyncram_rna1 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/altsyncram_rna1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_rna1" for hierarchy "ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_0"
+Warning (10492): VHDL Process Statement warning at RAM.vhd(38): signal "wrdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at RAM.vhd(47): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd Line: 47
+Info (12128): Elaborating entity "buttons" for hierarchy "buttons:buttons_0"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "rddata[31]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[30]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[29]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[28]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[27]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[26]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[25]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[24]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[23]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[22]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[21]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[20]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[19]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[18]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[17]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[16]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[15]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[14]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[13]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[12]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[11]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[10]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[9]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[8]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[7]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[6]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[5]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[4]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[3]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[2]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[1]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13048): Converted tri-state node "rddata[0]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[0]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[1]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[2]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[3]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[4]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 35
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[5]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 35
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/GECKO.ram0_register_file_87c776fc.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (276020): Inferred RAM node "CPU:inst|register_file:register_file_0|reg_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/GECKO.ram0_register_file_87c776fc.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (276020): Inferred RAM node "CPU:inst|register_file:register_file_0|reg_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "CPU:inst|register_file:register_file_0|reg_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/GECKO.ram0_register_file_87c776fc.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "CPU:inst|register_file:register_file_0|reg_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/GECKO.ram0_register_file_87c776fc.hdl.mif
+Info (12130): Elaborated megafunction instantiation "CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0"
+Info (12133): Instantiated megafunction "CPU:inst|register_file:register_file_0|altsyncram:reg_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/GECKO.ram0_register_file_87c776fc.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_usi1.tdf
+    Info (12023): Found entity 1: altsyncram_usi1 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/altsyncram_usi1.tdf Line: 27
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "CPU:inst|controller:controller_0|pc_en" merged with LATCH primitive "CPU:inst|controller:controller_0|ir_en" File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 19
+Warning (13012): Latch CPU:inst|controller:controller_0|write has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 33
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.STORE File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|sel_b has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 26
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.R_OP File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|sel_addr has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.STORE File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|imm_signed has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.STORE File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|rf_wren has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.R_OP File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|sel_rC has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.R_OP File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|ir_en has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.FETCH2 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Warning (13012): Latch CPU:inst|controller:controller_0|read has unsafe behavior File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 32
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|controller:controller_0|state.FETCH2 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 41
+Info (13000): Registers with preset signals will power-up high File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/LEDs.vhd Line: 90
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 57260 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 57062 logic cells
+    Info (21064): Implemented 96 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
+    Info: Peak virtual memory: 4979 megabytes
+    Info: Processing ended: Wed Oct 12 13:25:57 2022
+    Info: Elapsed time: 00:01:24
+    Info: Total CPU time (on all processors): 00:01:37
+
+
