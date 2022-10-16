@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Wed Oct 12 13:25:57 2022
+Sun Oct 16 19:29:11 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 12 13:25:56 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 16 19:29:10 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
@@ -737,18 +737,18 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 7:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[18]                             ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[17]                             ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[7]                              ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |GECKO|CPU:inst|IR:IR_0|Q[0]                              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|Mux9              ;
-; 1:1                ; 2 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|Mux6              ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |GECKO|rddata[30]                                         ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux17 ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux15 ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux27 ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux6  ;
+; 1:1                ; 2 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |GECKO|CPU:inst|controller:controller_0|Mux10             ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |GECKO|rddata[23]                                         ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux22 ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux9  ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux25 ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 32 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux5  ;
 ; 15:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux29 ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux3  ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux2  ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |GECKO|CPU:inst|ALU:alu_0|multiplexer:multiplexer_0|Mux1  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
@@ -1038,7 +1038,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:08     ;
+; Top            ; 00:01:09     ;
 +----------------+--------------+
 
 
@@ -1048,7 +1048,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 12 13:24:33 2022
+    Info: Processing started: Sun Oct 16 19:27:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1126,30 +1126,8 @@ Warning (10540): VHDL Signal Declaration warning at decoder.vhd(20): used explic
 Warning (10540): VHDL Signal Declaration warning at decoder.vhd(21): used explicit default value for signal "led_up" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 21
 Warning (10540): VHDL Signal Declaration warning at decoder.vhd(22): used explicit default value for signal "buttons_down" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 22
 Warning (10540): VHDL Signal Declaration warning at decoder.vhd(23): used explicit default value for signal "buttons_up" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at decoder.vhd(28): signal "rom_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at decoder.vhd(28): signal "rom_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at decoder.vhd(33): signal "ram_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at decoder.vhd(33): signal "ram_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at decoder.vhd(38): signal "led_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at decoder.vhd(38): signal "led_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at decoder.vhd(43): signal "buttons_down" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 43
-Warning (10492): VHDL Process Statement warning at decoder.vhd(43): signal "buttons_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/decoder.vhd Line: 43
 Info (12128): Elaborating entity "CPU" for hierarchy "CPU:inst"
 Info (12128): Elaborating entity "controller" for hierarchy "CPU:inst|controller:controller_0"
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(45): used explicit default value for signal "r_type" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 45
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(46): used explicit default value for signal "do_and" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 46
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(47): used explicit default value for signal "do_srl" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 47
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(48): used explicit default value for signal "do_addi" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(49): used explicit default value for signal "do_ldw" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 49
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(50): used explicit default value for signal "do_stw" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 50
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(51): used explicit default value for signal "do_break" because signal was never assigned a value File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 51
-Warning (10492): VHDL Process Statement warning at controller.vhd(106): signal "r_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at controller.vhd(115): signal "do_addi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at controller.vhd(117): signal "do_ldw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 117
-Warning (10492): VHDL Process Statement warning at controller.vhd(119): signal "do_stw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 119
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "do_and" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(108): signal "do_srl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at controller.vhd(110): signal "do_break" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 110
 Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "branch_op", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
 Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "imm_signed", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
 Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "ir_en", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
@@ -1166,17 +1144,11 @@ Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring
 Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "sel_rC", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
 Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "write", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
 Warning (10631): VHDL Process Statement warning at controller.vhd(72): inferring latch(es) for signal or variable "read", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
-Warning (10492): VHDL Process Statement warning at controller.vhd(167): signal "r_type" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 167
-Warning (10492): VHDL Process Statement warning at controller.vhd(178): signal "do_addi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 178
-Warning (10492): VHDL Process Statement warning at controller.vhd(178): signal "do_ldw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 178
-Warning (10492): VHDL Process Statement warning at controller.vhd(178): signal "do_stw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 178
-Warning (10492): VHDL Process Statement warning at controller.vhd(169): signal "do_and" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 169
-Warning (10492): VHDL Process Statement warning at controller.vhd(172): signal "do_srl" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 172
-Warning (10631): VHDL Process Statement warning at controller.vhd(164): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(164) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+Warning (10631): VHDL Process Statement warning at controller.vhd(162): inferring latch(es) for signal or variable "op_alu", which holds its previous value in one or more paths through the process File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+Info (10041): Inferred latch for "op_alu[0]" at controller.vhd(162) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+Info (10041): Inferred latch for "op_alu[1]" at controller.vhd(162) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+Info (10041): Inferred latch for "op_alu[2]" at controller.vhd(162) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+Info (10041): Inferred latch for "op_alu[3]" at controller.vhd(162) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
 Info (10041): Inferred latch for "read" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
 Info (10041): Inferred latch for "write" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
 Info (10041): Inferred latch for "sel_rC" at controller.vhd(72) File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 72
@@ -1220,8 +1192,6 @@ Info (12128): Elaborating entity "comparator" for hierarchy "CPU:inst|ALU:alu_0|
 Info (12128): Elaborating entity "logic_unit" for hierarchy "CPU:inst|ALU:alu_0|logic_unit:logic_unit_0"
 Info (12128): Elaborating entity "shift_unit" for hierarchy "CPU:inst|ALU:alu_0|shift_unit:shift_unit_0"
 Info (12128): Elaborating entity "register_file" for hierarchy "CPU:inst|register_file:register_file_0"
-Warning (10492): VHDL Process Statement warning at register_file.vhd(28): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at register_file.vhd(33): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd Line: 33
 Info (12128): Elaborating entity "mux2x5" for hierarchy "CPU:inst|mux2x5:mux_aw"
 Info (12128): Elaborating entity "mux2x32" for hierarchy "CPU:inst|mux2x32:mux_data"
 Info (12128): Elaborating entity "extend" for hierarchy "CPU:inst|extend:extend_0"
@@ -1248,7 +1218,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_rna1 File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/altsyncram_rna1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_rna1" for hierarchy "ROM:ROM_0|ROM_Block:rom_block|altsyncram:altsyncram_component|altsyncram_rna1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_0"
-Warning (10492): VHDL Process Statement warning at RAM.vhd(38): signal "wrdata" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd Line: 38
 Warning (10492): VHDL Process Statement warning at RAM.vhd(47): signal "reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd Line: 47
 Info (12128): Elaborating entity "buttons" for hierarchy "buttons:buttons_0"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
@@ -1284,10 +1253,10 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "rddata[2]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
     Warning (13048): Converted tri-state node "rddata[1]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
     Warning (13048): Converted tri-state node "rddata[0]" into a selector File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd Line: 19
-    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[0]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[1]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[2]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
-    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[3]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 164
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[0]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[1]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[2]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
+    Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[3]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 162
     Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[4]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 35
     Warning (13049): Converted tri-state buffer "CPU:inst|controller:controller_0|op_alu[5]" feeding internal logic into a wire File: C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd Line: 35
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/db/GECKO.ram0_register_file_87c776fc.hdl.mif" contains "don't care" values -- overwriting them with 0s
@@ -1375,10 +1344,10 @@ Info (21057): Implemented 57260 device resources after synthesis - the final res
     Info (21059): Implemented 96 output pins
     Info (21061): Implemented 57062 logic cells
     Info (21064): Implemented 96 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 4979 megabytes
-    Info: Processing ended: Wed Oct 12 13:25:57 2022
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 87 warnings
+    Info: Peak virtual memory: 5014 megabytes
+    Info: Processing ended: Sun Oct 16 19:29:11 2022
     Info: Elapsed time: 00:01:24
-    Info: Total CPU time (on all processors): 00:01:37
+    Info: Total CPU time (on all processors): 00:01:38
 
 

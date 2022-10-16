@@ -921,7 +921,7 @@ address[15] => LessThan6.IN17
 address[15] => LessThan7.IN17
 cs_LEDS <= cs_LEDS.DB_MAX_OUTPUT_PORT_TYPE
 cs_RAM <= cs_RAM.DB_MAX_OUTPUT_PORT_TYPE
-cs_ROM <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+cs_ROM <= cs_ROM.DB_MAX_OUTPUT_PORT_TYPE
 cs_buttons <= cs_buttons.DB_MAX_OUTPUT_PORT_TYPE
 
 

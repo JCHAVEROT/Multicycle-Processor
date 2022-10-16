@@ -107,9 +107,7 @@ begin
                         case opx_ext is
                             when do_and | do_srl =>
                                 next_state <= R_OP;
-                            when do_break =>
-                                next_state <= BREAK;
-                            when others =>
+                            when others => -- also when opx_ext = do_break
                                 next_state <= BREAK;
                         end case;
                     when do_addi =>

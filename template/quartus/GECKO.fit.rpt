@@ -1,5 +1,5 @@
 Fitter report for GECKO
-Wed Oct 12 16:01:11 2022
+Sun Oct 16 19:30:13 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,21 +62,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Wed Oct 12 16:01:11 2022           ;
+; Fitter Status                      ; Failed - Sun Oct 16 19:30:13 2022           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE40F23C8                                ;
+; Device                             ; EP4CE30F23C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 56,956 / 39,600 ( 144 % )                   ;
-;     Total combinational functions  ; 56,763 / 39,600 ( 143 % )                   ;
-;     Dedicated logic registers      ; 349 / 39,600 ( < 1 % )                      ;
+; Total logic elements               ; 56,956 / 28,848 ( 197 % )                   ;
+;     Total combinational functions  ; 56,763 / 28,848 ( 197 % )                   ;
+;     Dedicated logic registers      ; 349 / 28,848 ( 1 % )                        ;
 ; Total registers                    ; 349                                         ;
 ; Total pins                         ; 102 / 329 ( 31 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 34,816 / 1,161,216 ( 3 % )                  ;
-; Embedded Multiplier 9-bit elements ; 0 / 232 ( 0 % )                             ;
+; Total memory bits                  ; 34,816 / 608,256 ( 6 % )                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
@@ -86,7 +86,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Option                                                             ; Setting                               ; Default Value                         ;
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
-; Device                                                             ; EP4CE40F23C8                          ;                                       ;
+; Device                                                             ; EP4CE30F23C8                          ;                                       ;
 ; Use smart compilation                                              ; On                                    ; Off                                   ;
 ; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
@@ -195,53 +195,53 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                            ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Total logic elements                        ; 56,956 / 39,600 ( 144 % )  ;
-;     -- Combinational with no register       ; 56607                      ;
-;     -- Register only                        ; 193                        ;
-;     -- Combinational with a register        ; 156                        ;
-;                                             ;                            ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 22472                      ;
-;     -- 3 input functions                    ; 34145                      ;
-;     -- <=2 input functions                  ; 146                        ;
-;     -- Register only                        ; 193                        ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 56705                      ;
-;     -- arithmetic mode                      ; 58                         ;
-;                                             ;                            ;
-; Total registers*                            ; 349 / 41,173 ( < 1 % )     ;
-;     -- Dedicated logic registers            ; 349 / 39,600 ( < 1 % )     ;
-;     -- I/O registers                        ; 0 / 1,573 ( 0 % )          ;
-;                                             ;                            ;
-; Total LABs                                  ; Not available              ;
-; Virtual pins                                ; 0                          ;
-; I/O pins                                    ; 102 / 329 ( 31 % )         ;
-;     -- Clock pins                           ; 0 / 7 ( 0 % )              ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )              ;
-;                                             ;                            ;
-; M9Ks                                        ; 6 / 126 ( 5 % )            ;
-; Total block memory bits                     ; 34,816 / 1,161,216 ( 3 % ) ;
-; Total block memory implementation bits      ; 55,296 / 1,161,216 ( 5 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 232 ( 0 % )            ;
-; PLLs                                        ; 0 / 4 ( 0 % )              ;
-; Global signals                              ; 20                         ;
-;     -- Global clocks                        ; 20 / 20 ( 100 % )          ;
-; JTAGs                                       ; 0 / 1 ( 0 % )              ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )              ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )              ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )              ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )              ;
-; Maximum fan-out                             ; 3351                       ;
-; Highest non-global fan-out                  ; 3351                       ;
-; Total fan-out                               ; 195106                     ;
-; Average fan-out                             ; 3.40                       ;
-+---------------------------------------------+----------------------------+
++-------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                           ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Total logic elements                        ; 56,956 / 28,848 ( 197 % ) ;
+;     -- Combinational with no register       ; 56607                     ;
+;     -- Register only                        ; 193                       ;
+;     -- Combinational with a register        ; 156                       ;
+;                                             ;                           ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 22472                     ;
+;     -- 3 input functions                    ; 34145                     ;
+;     -- <=2 input functions                  ; 146                       ;
+;     -- Register only                        ; 193                       ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 56705                     ;
+;     -- arithmetic mode                      ; 58                        ;
+;                                             ;                           ;
+; Total registers*                            ; 349 / 30,421 ( 1 % )      ;
+;     -- Dedicated logic registers            ; 349 / 28,848 ( 1 % )      ;
+;     -- I/O registers                        ; 0 / 1,573 ( 0 % )         ;
+;                                             ;                           ;
+; Total LABs                                  ; Not available             ;
+; Virtual pins                                ; 0                         ;
+; I/O pins                                    ; 102 / 329 ( 31 % )        ;
+;     -- Clock pins                           ; 0 / 7 ( 0 % )             ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )             ;
+;                                             ;                           ;
+; M9Ks                                        ; 6 / 66 ( 9 % )            ;
+; Total block memory bits                     ; 34,816 / 608,256 ( 6 % )  ;
+; Total block memory implementation bits      ; 55,296 / 608,256 ( 9 % )  ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )           ;
+; PLLs                                        ; 0 / 4 ( 0 % )             ;
+; Global signals                              ; 20                        ;
+;     -- Global clocks                        ; 20 / 20 ( 100 % )         ;
+; JTAGs                                       ; 0 / 1 ( 0 % )             ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )             ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )             ;
+; Maximum fan-out                             ; 3351                      ;
+; Highest non-global fan-out                  ; 3351                      ;
+; Total fan-out                               ; 195106                    ;
+; Average fan-out                             ; 3.40                      ;
++---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -2343,14 +2343,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RAM:RAM_0|address_s[8]                         ; 3343    ;
 ; RAM:RAM_0|address_s[2]                         ; 3338    ;
 ; RAM:RAM_0|address_s[3]                         ; 3338    ;
-; RAM:RAM_0|address_s[4]                         ; 3316    ;
-; RAM:RAM_0|address_s[5]                         ; 3306    ;
+; RAM:RAM_0|address_s[4]                         ; 3315    ;
+; RAM:RAM_0|address_s[5]                         ; 3307    ;
 ; RAM:RAM_0|address_s[7]                         ; 3280    ;
 ; RAM:RAM_0|address_s[6]                         ; 3279    ;
-; RAM:RAM_0|address_s[1]                         ; 3254    ;
-; RAM:RAM_0|address_s[0]                         ; 3251    ;
+; RAM:RAM_0|address_s[1]                         ; 3253    ;
+; RAM:RAM_0|address_s[0]                         ; 3252    ;
 ; CPU:inst|register_file:register_file_0|reg~79  ; 1030    ;
-; CPU:inst|register_file:register_file_0|reg~42  ; 1028    ;
+; CPU:inst|register_file:register_file_0|reg~95  ; 1028    ;
 ; CPU:inst|register_file:register_file_0|reg~96  ; 1028    ;
 ; CPU:inst|register_file:register_file_0|reg~97  ; 1028    ;
 ; CPU:inst|register_file:register_file_0|reg~98  ; 1028    ;
@@ -2372,7 +2372,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CPU:inst|register_file:register_file_0|reg~92  ; 1028    ;
 ; CPU:inst|register_file:register_file_0|reg~93  ; 1028    ;
 ; CPU:inst|register_file:register_file_0|reg~94  ; 1028    ;
-; CPU:inst|register_file:register_file_0|reg~95  ; 1028    ;
+; CPU:inst|register_file:register_file_0|reg~42  ; 1028    ;
 ; CPU:inst|register_file:register_file_0|reg~102 ; 1027    ;
 ; CPU:inst|register_file:register_file_0|reg~103 ; 1027    ;
 ; CPU:inst|register_file:register_file_0|reg~104 ; 1027    ;
@@ -2763,14 +2763,14 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (119006): Selected device EP4CE40F23C8 for design "GECKO"
+Info (119006): Selected device EP4CE30F23C8 for design "GECKO"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP4CE15F23C8 is compatible
-    Info (176445): Device EP4CE30F23C8 is compatible
+    Info (176445): Device EP4CE40F23C8 is compatible
     Info (176445): Device EP4CE55F23C8 is compatible
     Info (176445): Device EP4CE75F23C8 is compatible
     Info (176445): Device EP4CE115F23C8 is compatible
@@ -2868,9 +2868,9 @@ Info (176215): I/O bank details before I/O pin placement
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:29
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Error (170011): Design contains 56763 blocks of type combinational node.  However, the device contains only 39600 blocks.
+Error (170011): Design contains 56763 blocks of type combinational node.  However, the device contains only 28848 blocks.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:09
-Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.24 seconds.
 Error (171000): Can't fit design in device
 Warning (169177): 6 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin clk uses I/O standard 3.3-V LVTTL at G1
@@ -2881,8 +2881,8 @@ Warning (169177): 6 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin in_buttons[2] uses I/O standard 3.3-V LVTTL at E1
 Info (144001): Generated suppressed messages file C:/EPFL/BA3/CS-208/Labs/Lab3/template/quartus/GECKO.fit.smsg
 Error: Quartus Prime Fitter was unsuccessful. 2 errors, 11 warnings
-    Error: Peak virtual memory: 5710 megabytes
-    Error: Processing ended: Wed Oct 12 16:01:12 2022
+    Error: Peak virtual memory: 5697 megabytes
+    Error: Processing ended: Sun Oct 16 19:30:14 2022
     Error: Elapsed time: 00:01:02
     Error: Total CPU time (on all processors): 00:01:04
 

@@ -1,5 +1,5 @@
 Flow report for GECKO
-Wed Oct 12 16:01:11 2022
+Sun Oct 16 19:30:13 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Oct 12 16:01:11 2022      ;
+; Flow Status                        ; Flow Failed - Sun Oct 16 19:30:13 2022      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE40F23C8                                ;
+; Device                             ; EP4CE30F23C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 56,956 / 39,600 ( 144 % )                   ;
-;     Total combinational functions  ; 56,763 / 39,600 ( 143 % )                   ;
-;     Dedicated logic registers      ; 349 / 39,600 ( < 1 % )                      ;
+; Total logic elements               ; 56,956 / 28,848 ( 197 % )                   ;
+;     Total combinational functions  ; 56,763 / 28,848 ( 197 % )                   ;
+;     Dedicated logic registers      ; 349 / 28,848 ( 1 % )                        ;
 ; Total registers                    ; 349                                         ;
 ; Total pins                         ; 102 / 329 ( 31 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 34,816 / 1,161,216 ( 3 % )                  ;
-; Embedded Multiplier 9-bit elements ; 0 / 232 ( 0 % )                             ;
+; Total memory bits                  ; 34,816 / 608,256 ( 6 % )                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2022 13:24:34 ;
+; Start date & time ; 10/16/2022 19:27:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GECKO               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 156704310921949.166557387404052        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 156704310921949.166594126708180        ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                    ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
@@ -95,13 +95,9 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:20     ; 1.0                     ; 4979 MB             ; 00:01:33                           ;
-; Fitter               ; 00:01:02     ; 1.0                     ; 5674 MB             ; 00:01:01                           ;
-; Fitter               ; 00:26:22     ; 1.0                     ; 6287 MB             ; 00:32:50                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4814 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:19     ; 2.2                     ; 5223 MB             ; 00:00:39                           ;
-; Fitter               ; 00:01:01     ; 1.0                     ; 5710 MB             ; 00:01:03                           ;
-; Total                ; 00:30:09     ; --                      ; --                  ; 00:37:11                           ;
+; Analysis & Synthesis ; 00:01:21     ; 1.0                     ; 5014 MB             ; 00:01:35                           ;
+; Fitter               ; 00:01:01     ; 1.0                     ; 5697 MB             ; 00:01:03                           ;
+; Total                ; 00:02:22     ; --                      ; --                  ; 00:02:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,10 +108,6 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; MBP-Windows      ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; MBP-Windows      ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; MBP-Windows      ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; MBP-Windows      ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; MBP-Windows      ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; MBP-Windows      ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -124,10 +116,6 @@ refer to the applicable agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 quartus_fit --read_settings_files=off --write_settings_files=off GECKO -c GECKO
-quartus_fit --read_settings_files=on --write_settings_files=off GECKO -c GECKO
-quartus_asm --read_settings_files=off --write_settings_files=off GECKO -c GECKO
-quartus_sta GECKO -c GECKO
-quartus_fit --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 
 
 

@@ -32,7 +32,7 @@ begin
         end if;
     end process;
     
-    write_to_ram : process(cs, write, address)
+    write_to_ram : process(cs, write, address, wrdata)
     begin
         if (cs = '1' and write = '1') then
             reg(to_integer(unsigned(address))) <= wrdata;

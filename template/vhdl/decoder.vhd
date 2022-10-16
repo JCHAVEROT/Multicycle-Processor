@@ -22,35 +22,10 @@ architecture synth of decoder is
     signal buttons_down : std_logic_vector(15 downto 0) := X"2030";
     signal buttons_up : std_logic_vector(15 downto 0) := X"2034";
 begin
-
-    process(address)
-    begin
-        if rom_down <= address and address <= rom_up then
-            cs_ROM <= '1';
-            cs_RAM <= '0';
-            cs_LEDS <= '0';
-            cs_buttons <= '0';
-        elsif ram_down <= address and address <= ram_up then
-            cs_ROM <= '0';
-            cs_RAM <= '1';
-            cs_LEDS <= '0';
-            cs_buttons <= '0';
-        elsif led_down <= address and address <= led_up then
-            cs_ROM <= '0';
-            cs_RAM <= '0';
-            cs_LEDS <= '1';
-            cs_buttons <= '0';
-        elsif buttons_down <= address and address <= buttons_up then
-            cs_ROM <= '0';
-            cs_RAM <= '0';
-            cs_LEDS <= '0';
-            cs_buttons <= '1';
-        else 
-            cs_ROM <= '0';
-            cs_RAM <= '0';
-            cs_LEDS <= '0';
-            cs_buttons <= '0';
-        end if;    
-    end process;
+    	
+    cs_ROM <= '1' when (rom_down <= address and address <= rom_up) else '0';
+    cs_RAM <= '1' when (ram_down <= address and address <= ram_up) else '0';
+    cs_LEDS <= '1' when (led_down <= address and address <= led_up) else '0';
+    cs_buttons <= '1' when (buttons_down <= address and address <= buttons_up) else '0';
 
 end synth;

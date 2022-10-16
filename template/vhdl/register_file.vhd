@@ -21,18 +21,10 @@ architecture synth of register_file is
     signal reg: reg_type := (0 => (others => '0'), others => (others => 'U')); -- because register 0 has fixed value 0
 
 begin
-
     -- asynchronous read process
-    read_aa : process(aa)
-    begin 
-        a <= reg(to_integer(unsigned(aa)));
-    end process;
+    a <= reg(to_integer(unsigned(aa)));
+    b <= reg(to_integer(unsigned(ab)));
     
-    read_ab : process(ab)
-    begin 
-        b <= reg(to_integer(unsigned(ab)));
-    end process;
-
     -- synchronous write process
     write : process(clk)
     variable address : natural range 0 to 31 := 0;
