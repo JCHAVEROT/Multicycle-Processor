@@ -32,10 +32,12 @@ begin
         end if;
     end process;
     
-    write_to_ram : process(cs, write, address, wrdata)
+    write_to_ram : process(clk, cs, write, address, wrdata)
     begin
-        if (cs = '1' and write = '1') then
-            reg(to_integer(unsigned(address))) <= wrdata;
+        if rising_edge(clk) then
+            if (cs = '1' and write = '1') then
+                reg(to_integer(unsigned(address))) <= wrdata;
+            end if;
         end if;
     end process;
 

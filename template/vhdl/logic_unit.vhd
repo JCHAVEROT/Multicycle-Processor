@@ -25,7 +25,7 @@ begin
             when "11" =>
                 r <= a xnor b;   
             when others =>
-                r <= (others => 'X');
+                r <= a nor b; -- default operation nor
 
         end case;
     end process;

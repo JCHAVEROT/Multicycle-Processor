@@ -396,15 +396,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "in_buttons[1]",
+					"strict" : false
+				},
+				{
 					"name" : "in_buttons[3]",
 					"strict" : false
 				},
 				{
 					"name" : "in_buttons[0]",
-					"strict" : false
-				},
-				{
-					"name" : "in_buttons[1]",
 					"strict" : false
 				},
 				{

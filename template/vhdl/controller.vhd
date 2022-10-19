@@ -165,18 +165,24 @@ begin
             when r_type =>
                 case opx_ext is
                     when do_and =>
-                        op_alu(5 downto 4) <= "10";
-                        op_alu(1 downto 0) <= "01";
+                        -- op_alu(5 downto 4) <= "10";
+                        -- op_alu(1 downto 0) <= "01";
+                        op_alu <= "10--01";
                     when do_srl =>
-                        op_alu(5 downto 4) <= "11";
-                        op_alu(2 downto 0) <= "011";
+                        -- op_alu(5 downto 4) <= "11";
+                        -- op_alu(2 downto 0) <= "011";
+                        op_alu <= "11-011";
                     when others => 
-                        op_alu <= (others => 'Z'); -- à changer surement
+                        -- op_alu(5 downto 4) <= "10"; 
+                        -- op_alu(1 downto 0) <= "01";
+                        op_alu <= "10--01"; -- default operation do_and
                 end case;
             when do_addi | do_ldw | do_stw => 
-                op_alu(5 downto 3) <= "000";
+                -- op_alu(5 downto 3) <= "000";
+                op_alu <= "000---";
             when others =>
-                op_alu <= (others => 'Z'); -- à changer surement
+                -- op_alu(5 downto 3) <= "000"; 
+                op_alu <= "000---"; -- default operation
         end case;
     end process;
     
