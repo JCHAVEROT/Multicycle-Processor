@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GECKO
-Thu Oct 20 01:06:46 2022
+Sat Oct 22 19:42:46 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 20 01:06:46 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 22 19:42:46 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; GECKO                                       ;
 ; Top-level Entity Name              ; GECKO                                       ;
@@ -1018,7 +1018,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Oct 20 01:06:30 2022
+    Info: Processing started: Sat Oct 22 19:42:30 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GECKO -c GECKO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1278,7 +1278,7 @@ Info (21057): Implemented 1820 device resources after synthesis - the final reso
     Info (21064): Implemented 128 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
     Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Thu Oct 20 01:06:46 2022
+    Info: Processing ended: Sat Oct 22 19:42:46 2022
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:31
 
