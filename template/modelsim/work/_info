@@ -22,9 +22,9 @@ V207_zj^V^3XmVFBkYPT0^3
 !s100 Ho^oT``GLJUNf<W@=D9Un1
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1666459315
+Z8 !s110 1667157232
 !i10b 1
-Z9 !s108 1666459315.000000
+Z9 !s108 1667157232.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/add_sub.vhd|
 Z11 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/add_sub.vhd|
 !i113 1
@@ -102,11 +102,11 @@ V6nKA>6XmzI`j>a@n4^6Pn2
 !s100 =22bV77NIHzbkEY31]2hQ2
 R7
 32
-Z22 !s110 1666459313
+!s110 1667157230
 !i10b 1
-Z23 !s108 1666459312.000000
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd|
-Z25 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd|
+Z22 !s108 1667157230.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd|
+Z24 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/buttons.vhd|
 !i113 1
 R12
 R13
@@ -121,11 +121,11 @@ Vz=5DD3`[2T_e1Tj`RUBgR3
 !s100 l:Q7JXKFoP5Z9FQDUXG9]3
 R7
 32
-R22
+Z25 !s110 1667157231
 !i10b 1
+R22
 R23
 R24
-R25
 !i113 1
 R12
 R13
@@ -144,9 +144,9 @@ V6aLKC8M`WFbUTzDPW6He83
 R7
 31
 b1
-Z29 !s110 1666459322
+Z29 !s110 1667157234
 !i10b 1
-Z30 !s108 1666459322.000000
+Z30 !s108 1667157234.000000
 Z31 !s90 -reportprogress|300|-93|../testbench/check_functions.vhd|
 Z32 !s107 ../testbench/check_functions.vhd|
 !i113 1
@@ -215,56 +215,56 @@ Z39 w1666220754
 R2
 R3
 R4
-Z40 8../vhdl/controller.vhd
-Z41 F../vhdl/controller.vhd
+Z40 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd
+Z41 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd
 l0
 L4
-V>:mGA0fg1bnEUkAc9L0EZ3
+V_=HMC5nS7CFmjhkXoh^<L0
 !s100 iLCb?>B5ja1L5iDVmAU]]0
 R7
-31
-R29
+32
+R25
 !i10b 1
-R30
-Z42 !s90 -reportprogress|300|-93|../vhdl/controller.vhd|
-Z43 !s107 ../vhdl/controller.vhd|
+Z42 !s108 1667157231.000000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd|
+Z44 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/controller.vhd|
 !i113 1
-o-93
+R12
 R13
 Asynth
 R2
 R3
-DEx4 work 10 controller 0 22 >:mGA0fg1bnEUkAc9L0EZ3
+DEx4 work 10 controller 0 22 _=HMC5nS7CFmjhkXoh^<L0
 l99
 L39
-VQ?:eE[hiRlNzaGnH=07573
+V12[k?XW>cI<z6F2_dgl6X0
 !s100 7bf0P5cF^l6N_4KJlmj_j2
 R7
-31
-R29
+32
+R25
 !i10b 1
-R30
 R42
 R43
+R44
 !i113 1
-o-93
+R12
 R13
 Ecpu
-Z44 w1665513631
+Z45 w1665513631
 R2
 R3
 R4
-Z45 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/CPU.vhd
-Z46 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/CPU.vhd
+Z46 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/CPU.vhd
+Z47 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/CPU.vhd
 l0
 L24
 VoN1Z@H62cOJ8j76FSZXfk0
 !s100 ?^3E^YkUK_jO8j=PLQg0X0
 R7
 32
-R22
+R25
 !i10b 1
-Z47 !s108 1666459313.000000
+R42
 Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/CPU.vhd|
 Z49 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/CPU.vhd|
 !i113 1
@@ -280,9 +280,9 @@ VU_VbP>G_0>o[AHnGEJ`7A2
 !s100 nj]fOeJzKgV2QQoiYJ37e2
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 R48
 R49
 !i113 1
@@ -342,9 +342,9 @@ VUL_6DHeRdI@k7FglXE4m:2
 !s100 [OER<nle^Gzi[Q]KGKSL33
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/extend.vhd|
 Z59 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/extend.vhd|
 !i113 1
@@ -360,16 +360,16 @@ VUeH3Fg`jaOO<9?=I>mc7V3
 !s100 0AH0;5WC[`555aKjjozO;3
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 R58
 R59
 !i113 1
 R12
 R13
 Egecko
-R44
+R45
 R2
 R3
 R4
@@ -381,9 +381,9 @@ VUUo[=d8;JL2NUd?KL5z>W3
 !s100 LSB69=RnS?7B=e740[]>J0
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/GECKO.vhd|
 Z63 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/GECKO.vhd|
 !i113 1
@@ -399,9 +399,9 @@ VXW8hfda?:0fgXTELaMc<M2
 !s100 6_aIkK46>FzI3D:<OBG:Z1
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 R62
 R63
 !i113 1
@@ -420,9 +420,9 @@ V^D0Sz[@@D76hLF6hc_Qm`1
 !s100 g>VC3<ZiU9SUL1eB^Hc9_3
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd|
 Z69 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/IR.vhd|
 !i113 1
@@ -438,16 +438,16 @@ V`ThEHe:K]<m98<KkTTMlW0
 !s100 =T9CZjE3jznLl6152SJkI3
 R7
 32
-R22
+R25
 !i10b 1
-R47
+R42
 R68
 R69
 !i113 1
 R12
 R13
 Eleds
-R44
+R45
 R1
 R2
 R3
@@ -539,11 +539,11 @@ V4iH6`nZgBAHVia??bJk>G2
 !s100 UDM^5ga=kb9Z[=K^]bghV0
 R7
 32
-Z82 !s110 1666459316
+R8
 !i10b 1
-Z83 !s108 1666459316.000000
-Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd|
-Z85 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd|
+R9
+Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd|
+Z83 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd|
 !i113 1
 R12
 R13
@@ -557,32 +557,32 @@ V=7fnGSnTmVd7O8QT4ZbGM1
 !s100 4d3b=I??mdkoV?j2G@Q@@0
 R7
 32
-R82
+R8
 !i10b 1
+R9
+R82
 R83
-R84
-R85
 !i113 1
 R12
 R13
 Emux2x16
-Z86 w1665558640
+Z84 w1665558640
 R2
 R3
 R4
-Z87 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd
-Z88 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd
+Z85 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd
+Z86 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd
 l0
 L4
 VaHOL`3MF?g?d`[6<SJm^e1
 !s100 ]AkMHg3_OS9:k6cjVd[b:3
 R7
 32
-Z89 !s110 1666459314
+R25
 !i10b 1
-Z90 !s108 1666459314.000000
-Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd|
-Z92 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd|
+R42
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd|
+Z88 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x16.vhd|
 !i113 1
 R12
 R13
@@ -596,32 +596,32 @@ V62VUS2z9FUoSE?I7A]ZJ`1
 !s100 a>V0n?CZ><WjCONDQg1UD2
 R7
 32
-R89
+R25
 !i10b 1
-R90
-R91
-R92
+R42
+R87
+R88
 !i113 1
 R12
 R13
 Emux2x32
-Z93 w1665558638
+Z89 w1665558638
 R2
 R3
 R4
-Z94 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd
-Z95 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd
+Z90 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd
+Z91 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd
 l0
 L4
 V5<9;E?13m3J1aF01KEAAR1
 !s100 Iab^5l@hZCaSi22IEjFiN0
 R7
 32
-R89
+R25
 !i10b 1
-R90
-Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd|
-Z97 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd|
+R42
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd|
+Z93 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x32.vhd|
 !i113 1
 R12
 R13
@@ -635,32 +635,32 @@ VTV91c2P@A]MP1d]6E@jNL1
 !s100 F5C2iWiGbF?QeHAO?62GR3
 R7
 32
-R89
+R25
 !i10b 1
-R90
-R96
-R97
+R42
+R92
+R93
 !i113 1
 R12
 R13
 Emux2x5
-Z98 w1665558481
+Z94 w1665558481
 R2
 R3
 R4
-Z99 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd
-Z100 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd
+Z95 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd
+Z96 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd
 l0
 L4
 VW@GMgb]B=<MlVOlGRRM2i3
 !s100 A96?gLbg3Wafg>1JToSDm3
 R7
 32
-R89
+R25
 !i10b 1
-R47
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd|
-Z102 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd|
+R42
+Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd|
+Z98 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/mux2x5.vhd|
 !i113 1
 R12
 R13
@@ -674,74 +674,74 @@ VMIjgX[NW=KVj8cGJk]VcN2
 !s100 n[0aK=68h12WfgE6SAm8Y3
 R7
 32
-R89
+R25
 !i10b 1
-R47
-R101
-R102
+R42
+R97
+R98
 !i113 1
 R12
 R13
 Epc
-Z103 w1666184067
+Z99 w1667157225
 R1
 R2
 R3
 R4
-Z104 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd
-Z105 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd
+Z100 8../vhdl/PC.vhd
+Z101 F../vhdl/PC.vhd
 l0
 L5
-VL1PS=`^7Dom5JHh`oiS8z0
+VNn?=zTB=WL19i;=KJYcA52
 !s100 Vz;DIYb[AY;g5[laVME<e3
 R7
-32
-R89
+31
+R29
 !i10b 1
-R90
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd|
-Z107 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd|
+R30
+Z102 !s90 -reportprogress|300|-93|../vhdl/PC.vhd|
+Z103 !s107 ../vhdl/PC.vhd|
 !i113 1
-R12
+o-93
 R13
 Asynth
 R1
 R2
 R3
-DEx4 work 2 pc 0 22 L1PS=`^7Dom5JHh`oiS8z0
+DEx4 work 2 pc 0 22 Nn?=zTB=WL19i;=KJYcA52
 l22
 L19
-VT08T<ne2GI3fN`GA1nK<g2
-!s100 >?E;]301O2OLgRb[_DID;0
+VMO2CcbYGV3d^V6S@TaQK@3
+!s100 TdCFc>4Vj0;A:3]f?f=ma3
 R7
-32
-R89
+31
+R29
 !i10b 1
-R90
-R106
-R107
+R30
+R102
+R103
 !i113 1
-R12
+o-93
 R13
 Eram
-Z108 w1666165736
+Z104 w1666165736
 R1
 R2
 R3
 R4
-Z109 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd
-Z110 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd
+Z105 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd
+Z106 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd
 l0
 L5
 VJiWAmLGUWmdVPB8L2QZ[D3
 !s100 9O>00CFElD4PLMkihiTWm3
 R7
 32
-R82
+Z107 !s110 1667157233
 !i10b 1
-R83
-Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd|
-Z112 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd|
+R9
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd|
+Z109 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/RAM.vhd|
 !i113 1
 R12
 R13
@@ -756,33 +756,33 @@ V@<NhU29I92RnlDOg:3k040
 !s100 QzG`WV;<=5V:@:LaIG6m=1
 R7
 32
-R82
+R107
 !i10b 1
-R83
-R111
-R112
+R9
+R108
+R109
 !i113 1
 R12
 R13
 Eregister_file
-Z113 w1665941261
+Z110 w1665941261
 R1
 R2
 R3
 R4
-Z114 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd
-Z115 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd
+Z111 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd
+Z112 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd
 l0
 L5
 VhQYRZ<6ijZW2:hk46k4IZ2
 !s100 _;mToXbZzY:WVO^oMIJ;J3
 R7
 32
-R82
+R107
 !i10b 1
-R83
-Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd|
-Z117 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd|
+Z113 !s108 1667157233.000000
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd|
+Z115 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/register_file.vhd|
 !i113 1
 R12
 R13
@@ -797,37 +797,37 @@ Vm?ZQ[LG;a:@2l_=;P50@K2
 !s100 1YHY04zG?]7L[@mbkbO]70
 R7
 32
-R82
+R107
 !i10b 1
-R83
-R116
-R117
+R113
+R114
+R115
 !i113 1
 R12
 R13
 Erom
-Z118 w1665085628
+Z116 w1665085628
 R2
 R3
 R4
-Z119 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd
-Z120 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd
+Z117 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd
+Z118 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd
 l0
 L4
 VLD>LKJh0<<KfR_G::f?6B1
 !s100 LzhnA0@bLeKPHkcXf<L3g3
 R7
 32
-R82
+R107
 !i10b 1
-R83
-Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd|
-Z122 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd|
+R113
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd|
+Z120 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM.vhd|
 !i113 1
 R12
 R13
 Asynth
-Z123 DEx4 work 9 rom_block 0 22 Cf[gZ]hQBZigaT1P:e9O01
+Z121 DEx4 work 9 rom_block 0 22 Cf[gZ]hQBZigaT1P:e9O01
 R2
 R3
 DEx4 work 3 rom 0 22 LD>LKJh0<<KfR_G::f?6B1
@@ -837,72 +837,72 @@ Vg633OY[CcHP71of;nm;_k0
 !s100 ]YDl1]6Z17W8`gRk]lok:3
 R7
 32
-R82
+R107
 !i10b 1
-R83
-R121
-R122
+R113
+R119
+R120
 !i113 1
 R12
 R13
 Erom_block
-Z124 w1664951209
+Z122 w1664951209
 R2
 R3
 R4
-Z125 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd
-Z126 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd
+Z123 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd
+Z124 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd
 l0
 L42
 VCf[gZ]hQBZigaT1P:e9O01
 !s100 Fb1^C3b1G3KcM]0dFoPHV2
 R7
 32
-R82
+R107
 !i10b 1
-R83
-Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd|
-Z128 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd|
+R113
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd|
+Z126 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/ROM_Block.vhd|
 !i113 1
 R12
 R13
 Asyn
 R2
 R3
-R123
+R121
 l82
 L52
 VZKBR7P0EaE;PJMf_Ho4411
 !s100 2O9W8o5<`cI7Pb0TBCEoL0
 R7
 32
-R82
+R107
 !i10b 1
-R83
-R127
-R128
+R113
+R125
+R126
 !i113 1
 R12
 R13
 Eshift_unit
-R44
+R45
 R1
 R2
 R3
 R4
-Z129 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd
-Z130 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd
+Z127 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd
+Z128 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd
 l0
 L5
 VoYz=ZP:Rg2U9Eb=ZGo>940
 !s100 C4@E7NN0:UB89P^MW405S0
 R7
 32
-R82
+R107
 !i10b 1
-R83
-Z131 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd|
-Z132 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd|
+R113
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd|
+Z130 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/shift_unit.vhd|
 !i113 1
 R12
 R13
@@ -917,68 +917,68 @@ VNOiOnk]_oCJDa8RHk=_0n1
 !s100 dC3RH_ngSNidhYJX18aNc2
 R7
 32
-R82
+R107
 !i10b 1
-R83
-R131
-R132
+R113
+R129
+R130
 !i113 1
 R12
 R13
 Etb_controller
 R19
-R33
+Z131 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
 R26
 R1
 R2
 R3
 R4
-Z133 8../testbench/tb_Controller.vhd
-Z134 F../testbench/tb_Controller.vhd
+Z132 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Controller.vhd
+Z133 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Controller.vhd
 l0
 L9
-V3E@KN_PfWzKDMi@e_IcgN1
+V5[W5lV9lALk`VLfB7G@O[1
 !s100 QPYMI?@zF<fA]gVd9c[kS0
 R7
-31
-R29
+32
+R25
 !i10b 1
-R30
-Z135 !s90 -reportprogress|300|-93|../testbench/tb_Controller.vhd|
-Z136 !s107 ../testbench/tb_Controller.vhd|
+R42
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Controller.vhd|
+Z135 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Controller.vhd|
 !i113 1
-o-93
+R12
 R13
 Atestbench
-R33
+R131
 R26
 R1
 R2
 R3
-DEx4 work 13 tb_controller 0 22 3E@KN_PfWzKDMi@e_IcgN1
+DEx4 work 13 tb_controller 0 22 5[W5lV9lALk`VLfB7G@O[1
 l102
 L15
-V3M1BHZOYlAHk5ZM;AdXib3
-Z137 !s100 _WkzDDFBPd:3LHMWS[AoW2
+Vco=kRgU:DP_WHcBQJ_8332
+!s100 _WkzDDFBPd:3LHMWS[AoW2
 R7
-31
-!s110 1666459323
+32
+R25
 !i10b 1
-R30
+R42
+R134
 R135
-R136
 !i113 1
-o-93
+R12
 R13
 Etb_extend
 R19
-Z138 DPx4 work 15 check_functions 0 22 <W1[dk2LN3hi[c?7kCXRb3
+R131
 R26
 R2
 R3
 R4
-Z139 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd
-Z140 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd
+Z136 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd
+Z137 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd
 l0
 L8
 Vaaa357Ec4Z]hSVLzLa]`V0
@@ -987,14 +987,14 @@ R7
 32
 R8
 !i10b 1
-R90
-Z141 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd|
-Z142 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd|
+R9
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd|
+Z139 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_Extend.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R138
+R131
 R26
 R2
 R3
@@ -1007,9 +1007,9 @@ R7
 32
 R8
 !i10b 1
-R90
-R141
-R142
+R9
+R138
+R139
 !i113 1
 R12
 R13
@@ -1018,8 +1018,8 @@ R19
 R2
 R3
 R4
-Z143 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd
-Z144 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd
+Z140 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd
+Z141 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd
 l0
 L4
 V5Tbz7Kl=147iIIz>>A8Y[3
@@ -1029,8 +1029,8 @@ R7
 R8
 !i10b 1
 R9
-Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd|
-Z146 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd|
+Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd|
+Z143 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_GECKO.vhd|
 !i113 1
 R12
 R13
@@ -1048,20 +1048,20 @@ R7
 R8
 !i10b 1
 R9
-R145
-R146
+R142
+R143
 !i113 1
 R12
 R13
 Etb_ir
 R19
-R138
+R131
 R26
 R2
 R3
 R4
-Z147 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd
-Z148 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd
+Z144 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd
+Z145 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd
 l0
 L8
 VNa]DdS==`51QO9@9@NCYO3
@@ -1071,13 +1071,13 @@ R7
 R8
 !i10b 1
 R9
-Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd|
-Z150 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd|
+Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd|
+Z147 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_IR.vhd|
 !i113 1
 R12
 R13
 Atestbench
-R138
+R131
 R26
 R2
 R3
@@ -1091,51 +1091,51 @@ R7
 R8
 !i10b 1
 R9
-R149
-R150
+R146
+R147
 !i113 1
 R12
 R13
 Etb_pc
 R19
-R138
+R33
 R26
 R2
 R3
 R4
-Z151 8C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_PC.vhd
-Z152 FC:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_PC.vhd
+Z148 8../testbench/tb_PC.vhd
+Z149 F../testbench/tb_PC.vhd
 l0
 L8
-VZbiH9]DK4fmMF;^e8W7zF1
+V2P^Ye]=DcVobhf_EG_H431
 !s100 _Sjg^6a@flK7I1KVlG]Sm2
 R7
-32
-R8
+31
+R29
 !i10b 1
-R9
-Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_PC.vhd|
-Z154 !s107 C:/EPFL/BA3/CS-208/Labs/Lab3/template/testbench/tb_PC.vhd|
+R30
+Z150 !s90 -reportprogress|300|-93|../testbench/tb_PC.vhd|
+Z151 !s107 ../testbench/tb_PC.vhd|
 !i113 1
-R12
+o-93
 R13
 Atestbench
-R138
+R33
 R26
 R2
 R3
-DEx4 work 5 tb_pc 0 22 ZbiH9]DK4fmMF;^e8W7zF1
+DEx4 work 5 tb_pc 0 22 2P^Ye]=DcVobhf_EG_H431
 l42
 L11
-V;4TRg:;B=`LN4JkHFOfZH3
-!s100 gKH@n?YGO`P>Bz<MRbX@K0
+Vf5G`eZIn6KizE:]=3UeFm0
+Z152 !s100 gKH@n?YGO`P>Bz<MRbX@K0
 R7
-32
-R8
+31
+R29
 !i10b 1
-R9
-R153
-R154
+R30
+R150
+R151
 !i113 1
-R12
+o-93
 R13

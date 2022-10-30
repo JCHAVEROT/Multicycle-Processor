@@ -77,15 +77,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity add_sub
 -- Compiling architecture synth of add_sub
 
-} {} {}} ../vhdl/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/PC.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity PC
--- Compiling architecture synth of PC
-
 } {} {}} ../vhdl/multiplexer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/EPFL/BA3/CS-208/Labs/Lab3/template/vhdl/multiplexer.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
