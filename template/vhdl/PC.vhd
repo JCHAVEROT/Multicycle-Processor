@@ -21,7 +21,7 @@ architecture synth of PC is
     signal next_addr : std_logic_vector(15 downto 0);
 begin
 
-    next_addr <= std_logic_vector(unsigned(curr_addr) + unsigned(imm)) when add_imm = '1' else
+    next_addr <= std_logic_vector(signed(curr_addr) + signed(imm)) when add_imm = '1' else
                  imm(13 downto 0) & "00" when sel_imm = '1' else
                  a when sel_a = '1' else 
                  std_logic_vector(unsigned(curr_addr) + to_unsigned(4, 16));
@@ -35,6 +35,7 @@ begin
         elsif rising_edge(clk) then
             if (en = '1') then
                 curr_addr <= next_addr;
+                curr_addr(1 downto 0) <= "00";
                 addr <= X"0000" & next_addr;
                 addr(1 downto 0) <= "00";
             end if;
