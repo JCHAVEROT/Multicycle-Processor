@@ -1,5 +1,6 @@
 #  Multicycle Processor
 
 Designing a Multicycle Processor
-Course CS-208 at EPFL
-Lab number 3, September-October 2022
+
+Lab 3 for the Course CS-208 at EPFL,
+September-October 2022
