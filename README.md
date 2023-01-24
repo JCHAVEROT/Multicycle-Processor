@@ -1,8 +1,9 @@
 #  Multicycle Processor
 
-Designing a Multicycle Processor
+Designing a Multicycle Processor in VHDL language.
 
-Lab 3 for the Course CS-208 at EPFL,
-September-October 2022
+This project was conducted within the framework of the Computer Architecture I ([CS-208](https://edu.epfl.ch/coursebook/fr/computer-architecture-i-CS-208)) course at EPFL.
 
-Authors: Sebastian Maier, Jeremy Chaverot
+Authors: Sebastian Maier, Jeremy Chaverot.
+
+Date: September-October 2022.
