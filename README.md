@@ -6,4 +6,4 @@ This project was conducted within the framework of the Computer Architecture I (
 
 Authors: Sebastian Maier, Jeremy Chaverot.
 
-Date: September-October 2022.
+Date: Sept-Oct 2022.
